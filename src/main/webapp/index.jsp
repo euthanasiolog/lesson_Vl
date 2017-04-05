@@ -1,4 +1,4 @@
-<%@ taglib prefix="piatr" uri="http://mycompany.com" %>
+<%@ taglib prefix="piatr" uri="/WEB-INF/myTags.tld" %>
 <html>
 <head>
     <title>Hello!</title>
