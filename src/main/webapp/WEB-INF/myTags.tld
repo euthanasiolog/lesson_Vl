@@ -15,5 +15,4 @@
         <tag-class>tags.TimeTag</tag-class>
         <body-content>empty</body-content>
     </tag>
-
 </taglib>
