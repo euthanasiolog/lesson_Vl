@@ -2,6 +2,7 @@ package tags;
 
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspTagException;
+import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.TagSupport;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
@@ -17,8 +18,7 @@ public class TimeTag extends TagSupport {
     public int doStartTag () throws JspException {
      String timeNow = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"));
      try {
-         PrintWriter printWriter = new PrintWriter(System.out, true);
-         printWriter.println("Time now is: "+timeNow);
+         pageContext.getOut().println("Time now: "+timeNow);
          return SKIP_BODY;
      } catch (Exception exception) { throw new JspTagException
              ("Tag Time"+exception.getMessage());
